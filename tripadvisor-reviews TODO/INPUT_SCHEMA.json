@@ -1,0 +1,23 @@
+{
+    "title": "TripAdvisor API/Scraper input",
+    "description": "To unleash the full power of the scraper/API use the options bellow!",
+    "type": "object",
+    "schemaVersion": 1,
+    "properties": {
+      "locationFullName": {
+        "title": "Location",
+        "type": "string",
+        "description": "Location name as you would enter to TripAdvisor search. Actor takes the first result as desired location. Input countries, cities, neighborhoods",
+        "prefill": "New Orleans",
+        "editor": "textfield"
+      },
+      "maxItems": {
+        "title": "Max search results",
+        "type": "integer",
+        "description": "Limit the number of places to be scraped. Use '0' to not limit the number of places scraped",
+        "default": 0,
+        "prefill": 10
+      }
+    },
+    "required": ["locationFullName"]
+  }
