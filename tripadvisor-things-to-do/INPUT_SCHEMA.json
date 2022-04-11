@@ -8,7 +8,7 @@
         "title": "Location",
         "type": "string",
         "description": "Location name as you would enter to TripAdvisor search. Actor takes the first result as desired location. Input countries, cities, neighborhoods",
-        "prefill": "New Orleans",
+        "prefill": "Chicago",
         "editor": "textfield"
       },
       "maxItems": {
