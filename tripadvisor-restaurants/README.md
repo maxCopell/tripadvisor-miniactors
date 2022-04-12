@@ -1,14 +1,14 @@
-# What does Tripadvisor Restaurants Scraper do?
+## What does Tripadvisor Restaurants Scraper do?
 With Tripadvisor Restaurants Scraper, you can get data about restaurants listed on Tripadvisor quickly and easily. It's suitable for scraping emails, addresses, reviews, awards and other information about restaurants on Tripadvisor.
 
-# How do I use Tripadvisor Restaurants Scraper?
+## How do I use Tripadvisor Restaurants Scraper?
 Enter the location, type the maximum number of items you want to extract, and download the data from the Dataset tab.
 
 For an input example, check the Input tab.
 
 You can extract a variety of data about places listed on Tripadvisor, including essential information, such as `email`, `phone`, `price` and `reviewTags`. Data can be downloaded in various formats, such as `JSON`, `CSV`, `XML` and others. For more details, see the [Apify docs](https://apify.com/docs).
 
-# How much does Tripadvisor Hotels Scraper cost? 
+## How much does Tripadvisor Hotels Scraper cost? 
 Apify provides you with $5 free usage credits to use every month on the [Apify Free plan](https://apify.com/pricing) and you can get up to 200,000 results from Tripadvisor Restaurants Scraper for $5. So it will be completely free for 200k results!
 
 If you need to get more data regularly you should grab an Apify subscription. We recommend our [$49/month Personal plan](https://apify.com/pricing) - you can get up to 2 million restaurants every month! Or if you want to scrape even more, grab our [Team plan](https://apify.com/pricing)!
