@@ -1,21 +1,28 @@
-# What does Tripadvisor Restaurants Scraper do?
-With Tripadvisor Restaurants Scraper, you can get data about restaurants listed on Tripadvisor quickly and easily. It's suitable for scraping emails, addresses, reviews, awards and other information about restaurants on Tripadvisor.
+## What can this unofficial Free Tripadvisor API do?
+This scraper lets you get data from Tripadvisor fast and easily. It's suitable for such use cases as scraping Tripadvisor reviews, emails, addresses, awards, and many more attributes of hotels and restaurants on the Tripadvisor platform.
 
-# How do I use Tripadvisor Restaurants Scraper?
-Enter the location, type the maximum number of items you want to extract, and download the data from the Dataset tab.
+This free version is limited in number of results, it will provide you with maximum of 100 places for each search. If you want to scrape reviews as well the limit there is 20 reviews per place.
+If you want to scrape more than 100 places and 20 reviews, try our [unlimited Tripadvisor scraper](https://apify.com/maxcopell/tripadvisor).   
 
-For an input example, check the Input tab.
+You can either enter the location and download the data from the dataset or send a synchronous request to the actor endpoint and crawl all the information about a single place (e.g., hotel, restaurant) in 15 seconds.
 
-You can extract a variety of data about places listed on Tripadvisor, including essential information, such as `email`, `phone`, `price` and `reviewTags`. Data can be downloaded in various formats, such as `JSON`, `CSV`, `XML` and others. For more details, see the [Apify docs](https://apify.com/docs).
+## How do I use Tripadvisor Scraper?
+You can either use search term (location), or use specific ids (place, restaurant, or hotel id)
 
-# How much does Tripadvisor Hotels Scraper cost? 
-Apify provides you with $5 free usage credits to use every month on the [Apify Free plan](https://apify.com/pricing) and you can get up to 200,000 results from Tripadvisor Restaurants Scraper for $5. So it will be completely free for 200k results!
+If you use  _search_, you can state how many items you want to get in the  _maximum items_  field, then what content you want to get (attractions, restaurants, hotels). If you are scraping hotels you can also choose check-in dates).
 
-If you need to get more data regularly you should grab an Apify subscription. We recommend our [$49/month Personal plan](https://apify.com/pricing) - you can get up to 2 million restaurants every month! Or if you want to scrape even more, grab our [Team plan](https://apify.com/pricing)!
+Alternatively, you can scrape review tags from specified places as well as reviews from specific dates (you can set a limit on the number of reviews you want to scrape). You can also select languages and currencies.
 
-## Just want to extract data on things to do or hotels instead?
-If you want to scrape Tripadvisor things to do or hotels instead, check out these other Tripadvisor scrapers:
+## How much does Tripadvisor Scraper cost?
+It will cost you approx. USD 0.50 to scrape 1,000 items. The more results you want to scrape, the more time it will take and the more usage credits it will cost.
 
-- Scrape restaurants with [Tripadvisor Things To Do Scraper](https://apify.com/maxcopell/tripadvisor-things-to-do-scraper).
-- Scrape hotels with [Tripadvisor Hotels Scraper](https://apify.com/maxcopell/tripadvisor-hotels-scraper)
+Apify provides you with USD 5 free usage credits to use every month on the Apify Free plan so you can get up to 10,000 reviews from Tripadvisor Scraper for those credits. So 10k results will be completely free!
 
+But if you need to get more data or to get your data regularly you should grab an Apify subscription. We recommend our $49/month Personal plan - you could get up to 100,000 Tripadvisor reviews every month with the $49 monthly plan!
+
+## Tips for API Usage
+If you want to get information about a single hotel or restaurant and you don't want it in a single synchronous API call, the API is right for you.
+
+Be aware that it might be impossible to maintain an idle HTTP connection for a long period of time, due to client timeout or network conditions. Make sure your HTTP client is configured to have a long enough connection timeout. If the connection breaks, you will not receive any information about the run and its status. However for a normal location with a reasonable number of reviews (~1000) it should not take more than 20 seconds. You can  _paginate_  the reviews using  `lastReviewDate`  property.
+
+Here is a link to the part of  [Apify docs](https://www.apify.com/docs/api/v2#/reference/actors/run-actor-synchronously/with-input)  that covers running an actor synchronously.
