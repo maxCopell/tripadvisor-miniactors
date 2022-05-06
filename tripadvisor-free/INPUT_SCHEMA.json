@@ -11,13 +11,25 @@
       "prefill": "Prague",
       "editor": "textfield"
     },
+    "startUrls": {
+      "title": "Start URLs",
+      "type": "array",
+      "description": "URLs to start with instead of a location name. You can use urls with search query included (containing 'Search?q=') or urls pointing to a concrete hotel or restaurant (containing 'Hotel_Review' or 'Restaurant_Review')",
+      "editor": "requestListSources",
+      "prefill": [
+        {
+          "url": "https://www.tripadvisor.com/Hotel_Review-g295424-d21321279-Reviews-Sofitel_Dubai_the_Obelisk-Dubai_Emirate_of_Dubai.html"
+        }
+      ]
+    },
     "maxItems": {
       "title": "Max search results",
       "type": "integer",
-      "description": "Limit the number of places to be scraped. This free Tripadvisor scraper supposrts maximum of 100 places. If you need more, use unlimited [Tripadvisor Scraper](https://apify.com/maxcopell/tripadvisor)",
-      "default": 0,
+      "description": "Limit the number of places to be scraped. This free Tripadvisor scraper supports maximum of 100 places. If you need more, use unlimited.",
+      "default": 100,
       "prefill": 10,
-      "maximum": 100
+      "maximum": 100,
+      "minimum": 1
     },
     "includeAttractions": {
       "title": "Include things to do",
@@ -45,26 +57,6 @@
       "description": "Hotel rooms prices will be calculated for this date",
       "editor": "textfield"
     },
-    "locationId": {
-      "title": "Location id",
-      "type": "string",
-      "description": "Id of location. You can use it instead of location name",
-      "editor": "textfield",
-      "sectionCaption": "Search directly via places Ids",
-      "sectionDescription": "You can find the Id of the place in its URL after -d. E.g. for https://www.tripadvisor.cz/Hotel_Review-g186338-d1657415-Reviews-Park_Plaza_Westminster_Bridge_London-London_England.html the id would be 1657415."
-    },
-    "hotelId": {
-      "title": "Hotel id",
-      "type": "string",
-      "description": "Id of hotel",
-      "editor": "textfield"
-    },
-    "restaurantId": {
-      "title": "Restaurant id",
-      "type": "string",
-      "description": "Id of restaurant",
-      "editor": "textfield"
-    },
     "includeTags": {
       "title": "Include review tags",
       "description": "Include review tags",
@@ -85,7 +77,8 @@
       "description": "This free Tripadvisor scraper supports maximum of 20 reviews per one place. If you need more, use unlimited [Tripadvisor Scraper](https://apify.com/maxcopell/tripadvisor).",
       "default": 20,
       "prefill": 10,
-      "maximum": 20
+      "maximum": 20,
+      "minimum": 1
     },
     "lastReviewDate": {
       "title": "Reviews since date (YYYY-MM-DD)",
